@@ -1,0 +1,10 @@
+SFMLJoystick:
+  description: ''
+  git: https://github.com/sugarsweetrobotics/SFMLJoystick.git
+  hash: 447d2d103a2c7b7e63a01d2a32c457f01b82051c
+  repo_name: SFMLJoystick
+SFMLJoystickTest:
+  description: SFMLJoystick RT-component Test
+  git: https://github.com/sugarsweetrobotics/SFMLJoystickTest.git
+  hash: b00c68fe43da233b9c3522df8f4d271410ae2d12
+  repo_name: SFMLJoystickTest
