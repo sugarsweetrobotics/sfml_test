@@ -1,3 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rts:RtsProfile rts:updateDate="2013-03-18T14:53:04+09:00" rts:creationDate="2013-03-18T14:53:04+09:00" rts:version="0.2" rts:id="RTSystem:Sugar Sweet Robotics:DefaultSystem:1.0" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" ?>
+<rts:RtsProfile rts:abstract="" rts:creationDate="2015-09-18T15:41:53" rts:id="RTSystem:SUGAR SWEET ROBOTICS:sfml_test:1.0.0" rts:updateDate="2015-09-18T15:41:53" rts:version="0.2" xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rts:Components rts:activeConfigurationSet="default" rts:compositeType="None" rts:id="RTC:SSR:Humaninterface:SFMLJoystickTest:1.0.0" rts:instanceName="SFMLJoystickTest0" rts:isRequired="true" rts:pathUri="localhost:2809/SFMLJoystickTest0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="axis" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="buttons" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="0" rts:name="debug"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="text" rts:name="debug"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e300000000001000000000000006800000001010200100000003139322e3136382e3132382e31393400fa0a00000e000000fe12b2fb5500004e50000000000500000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100"/>
+    </rts:Components>
+    <rts:Components rts:activeConfigurationSet="default" rts:compositeType="None" rts:id="RTC:Sugar Sweet Robotics:HumanInterface:SFMLJoystick:1.0.0" rts:instanceName="SFMLJoystick0" rts:isRequired="true" rts:pathUri="localhost:2809/SFMLJoystick0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="axis" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="buttons" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="0" rts:name="debug"/>
+            <rts:ConfigurationData rts:data="100" rts:name="axis_max"/>
+            <rts:ConfigurationData rts:data="0" rts:name="id"/>
+            <rts:ConfigurationData rts:data="event" rts:name="buttonOutputStyle"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="text" rts:name="debug"/>
+            <rts:ConfigurationData rts:data="text" rts:name="id"/>
+            <rts:ConfigurationData rts:data="spin" rts:name="buttonOutputStyle"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__constraints__">
+            <rts:ConfigurationData rts:data="event, continuous" rts:name="buttonOutputStyle"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e300000000001000000000000006800000001010200100000003139322e3136382e3132382e31393400fa0a00000e000000fe12b2fb5500004e50000000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100"/>
+    </rts:Components>
+    <rts:DataPortConnectors rts:connectorId="AA38F111-0239-40C1-BB00-000000000000" rts:dataType="IDL:RTC/TimedLongSeq:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="axisaxis" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:HumanInterface:SFMLJoystick:1.0.0" rts:instanceName="SFMLJoystick0" rts:portName="SFMLJoystick0.axis">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/SFMLJoystick0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:SSR:Humaninterface:SFMLJoystickTest:1.0.0" rts:instanceName="SFMLJoystickTest0" rts:portName="SFMLJoystickTest0.axis">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/manager_cpp.mgr/SFMLJoystickTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedLongSeq:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="07DB8286-663C-4236-9074-C7332A4BF7C8" rts:dataType="IDL:RTC/TimedBooleanSeq:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="buttonsbuttons" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:HumanInterface:SFMLJoystick:1.0.0" rts:instanceName="SFMLJoystick0" rts:portName="SFMLJoystick0.buttons">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/SFMLJoystick0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:SSR:Humaninterface:SFMLJoystickTest:1.0.0" rts:instanceName="SFMLJoystickTest0" rts:portName="SFMLJoystickTest0.buttons">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost:2809/manager_cpp.mgr/SFMLJoystickTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
 </rts:RtsProfile>
